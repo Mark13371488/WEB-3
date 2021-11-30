@@ -1,0 +1,30 @@
+/* Скролбар */
+*::-webkit-scrollbar {
+   width: 9px;
+   height: 9px;
+}
+
+/* Фон скролбару */
+*::-webkit-scrollbar-track {
+   background-color: #3f2828;
+}
+
+/* Перехрестя скролбарів */
+*::-webkit-scrollbar-corner {
+   background-color: #472c2c;
+}
+
+/* Смужка скролбару */
+*::-webkit-scrollbar-thumb {
+   background-image: repeating-linear-gradient(45deg,
+                                             #312020,
+                                             #3b2020 20px,
+                                             #405980 20px,
+                                             #364b6b 40px);
+ }
+
+ /* Стилі скролбару для браузера Firefox */
+* {
+   scrollbar-color: #0d6efd #333333;
+   scrollbar-width: auto;
+}

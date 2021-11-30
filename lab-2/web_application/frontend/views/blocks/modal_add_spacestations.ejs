@@ -1,0 +1,56 @@
+<!-- Модальне вікно -->
+<div class="modal fade" id="modal_spacestations" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark">
+
+      <!-- Заголовок модального вікна -->
+      <div class="modal-header border-secondary">
+        <div class="d-flex flex-column">
+          <span class="fs-3 lh-1" id="spacestation_title">#Title</span>
+        </div>
+        <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+
+          <span class="fs-5">Назва</span>
+          <input class="form-control fs-5 bg-dark text-light border-primary mb-2" id="spacestation_name" type="text"
+            placeholder="Назва">
+
+          <div class="row gx-3">
+            <div class="col-12 col-sm-2">
+
+              <span class="fs-5">Місткість</span>
+              <input class="form-control fs-5 bg-dark text-light border-primary" id="spacestation_age" type="number"
+                placeholder="Місткість">
+            </div>
+
+            <div class="col-12 mb-2 d-block d-sm-none"></div>
+            <div class="col-12 col-sm-10">
+
+              <span class="fs-5">Планета</span>
+              <div class="dropdown">
+                <button class="btn btn-outline-primary fs-5 w-100 dropdown-toggle" type="button" id="spacestation_planet"
+                  data-bs-toggle="dropdown" aria-expanded="false">Виберіть планету</button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="spacestation_planet"
+                  id="spacestation_planets_list">
+                  <li><span class="dropdown-item" onclick="set_planet(this)">. . .</span></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Кнопки модального вікна -->
+      <div class="modal-footer border-secondary">
+        <button class="btn btn-outline-primary" id="spacestation_yes" data-bs-dismiss="modal"
+          onclick="modal_add_spacestations()">#Yes</button>
+        <button class="btn btn-outline-secondary" id="spacestation_no" data-bs-dismiss="modal">Відміна</button>
+      </div>
+    </div>
+  </div>
+</div>

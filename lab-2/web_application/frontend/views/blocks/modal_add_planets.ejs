@@ -1,0 +1,34 @@
+<!-- Модальне вікно -->
+<div class="modal fade" id="modal_planets" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark">
+
+      <div class="modal-header border-secondary">
+        <div class="d-flex flex-column">
+          <span class="fs-3 lh-1" id="planet_title">#Title</span>
+        </div>
+        <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+
+          <span class="fs-5">Назва планети</span>
+          <input class="form-control fs-5 bg-dark text-light border-primary mb-2" id="planet_name" type="text"
+            placeholder="Назва">
+
+          <span class="fs-5">Місткість планети</span>
+          <input class="form-control fs-5 bg-dark text-light border-primary" id="planet_address" type="text"
+            placeholder="Місткість">
+        </form>
+      </div>
+
+      <div class="modal-footer border-secondary">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal" onclick="modal_add_planets()"
+          id="planet_yes">#Yes</button>
+        <button class="btn btn-outline-secondary" data-bs-dismiss="modal" id="planet_no">Відміна</button>
+      </div>
+    </div>
+  </div>
+</div>

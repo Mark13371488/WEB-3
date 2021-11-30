@@ -1,0 +1,67 @@
+<!-- Модальне вікно -->
+<div class="modal fade" id="modal_goods" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark">
+
+      <div class="modal-header border-secondary">
+        <div class="d-flex flex-column">
+          <span class="fs-3 lh-1" id="good_title">#Title</span>
+        </div>
+        <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+
+
+          <span class="fs-5">Назва товару</span>
+          <input class="form-control fs-5 bg-dark text-light border-primary mb-2" id="good_name" type="text"
+            placeholder="Назва товару">
+
+          <div class="row gx-3 mb-2">
+            <div class="col-12 col-sm-2">
+
+
+              <span class="fs-5">Вага</span>
+              <input class="form-control fs-5 bg-dark text-light border-primary" id="good_age" type="number"
+                placeholder="Вага" >
+            </div>
+
+            <div class="col-12 mb-2 d-block d-sm-none"></div>
+            <div class="col-12 col-sm-10">
+
+
+              <span class="fs-5">Станція</span>
+              <div class="dropdown">
+                <button class="btn btn-outline-primary fs-5 w-100 dropdown-toggle" type="button" id="good_spacestation"
+                  data-bs-toggle="dropdown" aria-expanded="false">Виберіть станцію</button>
+                <ul class="dropdown-menu dropdown-menu-secondary" aria-labelledby="good_spacestation" id="good_spacestations_list">
+                  <li><span class="dropdown-item" onclick="set_spacestation(this)">. . .</span></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <span class="fs-5">Планета</span>
+          <div class="dropdown">
+            <button class="btn btn-outline-primary fs-5 w-100 dropdown-toggle" type="button" id="good_planet"
+              data-bs-toggle="dropdown" aria-expanded="false">Виберіть планету</button>
+            <ul class="dropdown-menu dropdown-menu-secondary" aria-labelledby="good_planet" id="good_planets_list">
+              <li><span class="dropdown-item" onclick="set_planet(this)">. . .</span></li>
+            </ul>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Кнопки модального вікна -->
+      <div class="modal-footer border-secondary">
+        <button class="btn btn-outline-primary" id="good_yes" data-bs-dismiss="modal"
+          onclick="modal_add_goods()">#Yes</button>
+        <button class="btn btn-outline-secondary" id="good_no" data-bs-dismiss="modal">Відміна</button>
+      </div>
+    </div>
+  </div>
+</div>
