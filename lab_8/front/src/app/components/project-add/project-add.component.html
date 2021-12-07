@@ -1,0 +1,25 @@
+<h3>Add Project</h3>
+<form>
+
+  <label for="projectId">id:
+    <input #projectId type="number" name="projectId" required>
+  </label><br>
+
+  <label for="projectName">name:
+    <input #projectName type="text" name="projectName" required>
+  </label><br>
+
+  <label for="projectDescription">description:
+    <input #projectDescription type="text" name="projectDescription" required>
+  </label><br>
+
+  <label for="projectCustomer">customer:
+    <input #projectCustomer type="text" name="projectCustomer" required>
+  </label><br>
+
+  <label for="projectSkill">skill:
+    <input #projectSkill type="number" name="projectSkill" required>
+  </label><br>
+
+  <button (click)="addProject(projectId.value,projectName.value,projectDescription.value,projectCustomer.value,projectSkill.value)">Add</button>
+</form>

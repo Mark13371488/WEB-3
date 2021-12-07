@@ -1,0 +1,13 @@
+<app-performer-add (changed)="getPerformers()">
+
+</app-performer-add>
+<h2>Performers</h2>
+<ul class="performers">
+  <li *ngFor="let performer of performers" [class.selected]="performer === selectedPerformer" (click)="onSelect(performer)">
+    <span class="badge">{{performer.id}}</span> {{performer.number}} {{performer.experience}} {{performer.workers}}
+  </li>
+</ul>
+
+<app-performer-details [performer]="selectedPerformer" (changed)="getPerformers()">
+
+</app-performer-details>

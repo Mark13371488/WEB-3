@@ -1,0 +1,20 @@
+<div *ngIf="customer">
+  <h2>Customer details</h2>
+  <form>
+
+    <label for="customerId">id:
+      <input #customerId type="number" name="customerId" required disabled value={{customer.id}}>
+    </label><br>
+
+    <label for="customerName">name:
+      <input #customerName type="text" name="customerName" required disabled value={{customer.name}}>
+    </label><br>
+
+    <label for="customerBudget">budget:
+      <input #customerBudget type="number" name="customerBudget" required value={{customer.budget}}>
+    </label><br>
+
+    <button (click)="editCustomer(customerId.value,customerName.value,customerBudget.value)">Edit</button>
+    <button (click)="deleteCustomer(customer)">Delete</button>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<div *ngIf="project">
+  <h2>Project details</h2>
+  <form>
+
+    <label for="projectId">id:
+      <input #projectId type="number" name="projectId" required disabled value={{project.id}}>
+    </label><br>
+
+    <label for="projectName">name:
+      <input #projectName type="text" name="projectName" required value={{project.name}}>
+    </label><br>
+
+    <label for="projectDescription">description:
+      <input #projectDescription type="text" name="projectDescription" required disabled value={{project.Description}}>
+    </label><br>
+
+    <label for="projectCustomer">customer:
+      <input #projectCustomer type="text" name="projectCustomer" required value={{project.customer}}>
+    </label><br>
+
+    <label for="projectSkill">skill:
+      <input #projectSkill type="number" name="projectSkill" required value={{project.skill}}>
+    </label><br>
+
+    <button (click)="editProject(projectId.value,projectName.value,projectDescription.value,projectCustomer.value,projectSkill.value)">Edit</button>
+    <button (click)="deleteProject(project)">Delete</button>
+  </form>
+</div>

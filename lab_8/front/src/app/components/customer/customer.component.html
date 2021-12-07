@@ -1,0 +1,13 @@
+<app-customer-add (changed)="getCustomers()">
+
+</app-customer-add>
+<h2>Customers</h2>
+<ul class="customers">
+  <li *ngFor="let customer of customers" [class.selected]="customer === selectedCustomer" (click)="onSelect(customer)">
+    <span class="badge">{{customer.id}}</span> {{customer.name}} {{customer.budget}}
+  </li>
+</ul>
+
+<app-customer-details [customer]="selectedCustomer" (changed)="getCustomers()">
+
+</app-customer-details>

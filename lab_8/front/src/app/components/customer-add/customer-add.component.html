@@ -1,0 +1,17 @@
+<h3>Add Customer</h3>
+<form>
+
+  <label for="customerId">id:
+    <input #customerId type="number" name="customerId" required>
+  </label><br>
+
+  <label for="customerName">name:
+    <input #customerName type="text" name="customerName" required>
+  </label><br>
+
+  <label for="customerBudget">budget:
+    <input #customerBudget type="number" name="customerBudget" required>
+  </label><br>
+
+  <button (click)="addCustomer(customerId.value,customerName.value,customerBudget.value)">Add</button>
+</form>

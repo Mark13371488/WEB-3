@@ -1,0 +1,21 @@
+<h3>Add Performer</h3>
+<form>
+
+  <label for="performerId">id:
+    <input #performerId type="number" name="performerId" required>
+  </label><br>
+
+  <label for="performerNumber">number:
+    <input #performerNumber type="number" name="performerNumber" required>
+  </label><br>
+
+  <label for="performerExperience">experience:
+    <input #performerExperience type="number" name="performerExperience" required>
+  </label><br>
+
+  <label for="performerWorkers">workers:
+    <input #performerWorkers type="number" name="performerWorkers" required>
+  </label><br>
+
+  <button (click)="addPerformer(performerId.value,performerNumber.value,performerExperience.value,performerWorkers.value)">Add</button>
+</form>
